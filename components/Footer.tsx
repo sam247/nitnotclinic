@@ -1,20 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
-const mainPages = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Head Lice Treatment Services" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Book Appointment" },
-  { href: "/news", label: "News & Articles" },
-];
-
-const articles = [
-  { href: "/news/why-do-head-lice-treatments-keep-failing", label: "Why Do Head Lice Treatments Keep Failing?" },
-  { href: "/news/do-i-need-professional-head-lice-treatment", label: "Do I Need Professional Head Lice Treatment?" },
-  { href: "/news/head-lice-treatment-for-adults", label: "Head Lice Treatment for Adults" },
-];
-
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
@@ -60,6 +46,9 @@ const Footer = () => {
               <Link href="/news" className="block text-sm sm:text-base text-gray-600 hover:text-orange-500 transition-colors">
                 News & Articles
               </Link>
+              <a href="/sitemap.xml" className="block text-sm sm:text-base text-gray-600 hover:text-orange-500 transition-colors">
+                Sitemap
+              </a>
             </div>
           </div>
 
@@ -74,43 +63,6 @@ const Footer = () => {
                 <p>Mon – Fri: 10:00 – 19:30</p>
                 <p>Sat: 11:00 – 17:00</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Sitemap + XML sitemap link */}
-        <div className="border-t border-gray-200 mt-8 pt-8">
-          <h4 className="text-sm font-semibold text-gray-900 mb-3">Sitemap</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-            <div>
-              <p className="font-medium text-gray-700 mb-2">Main pages</p>
-              <ul className="space-y-1">
-                {mainPages.map((p) => (
-                  <li key={p.href}>
-                    <Link href={p.href} className="text-gray-600 hover:text-orange-500 transition-colors">
-                      {p.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="font-medium text-gray-700 mb-2">Articles</p>
-              <ul className="space-y-1">
-                {articles.map((a) => (
-                  <li key={a.href}>
-                    <Link href={a.href} className="text-gray-600 hover:text-orange-500 transition-colors">
-                      {a.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="font-medium text-gray-700 mb-2">SEO</p>
-              <a href="/sitemap.xml" className="text-gray-600 hover:text-orange-500 transition-colors">
-                XML Sitemap
-              </a>
             </div>
           </div>
         </div>
