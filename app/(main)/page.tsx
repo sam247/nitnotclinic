@@ -99,7 +99,7 @@ export default function IndexPage() {
             >
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-100 to-orange-50 p-4 sm:p-8">
                 <Image
-                  src="/images/nitnot-treatment.png"
+                  src="/images/hero_image.webp"
                   alt="Professional head lice treatment at NitNOT Clinic, Hampton"
                   width={800}
                   height={500}
@@ -176,7 +176,7 @@ export default function IndexPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/nitnot-products.png"
+                src="/images/safe_non_toxic_section.webp"
                 alt="NitNOT eco-friendly head lice treatment products"
                 width={800}
                 height={500}

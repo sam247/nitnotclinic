@@ -25,7 +25,15 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img src="/images/nitnot-logo.webp" alt="NitNOT Clinic" className="h-6 w-auto" />
+              <img
+                src="/images/logo.webp"
+                alt="NitNOT Clinic"
+                className="h-6 w-auto"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
+              />
             </Link>
           </div>
 

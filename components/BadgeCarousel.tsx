@@ -6,11 +6,11 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const badges = [
-  { src: "/images/badge-100-effective.png", alt: "100% Effective" },
-  { src: "/images/badge-eco-friendly.png", alt: "Eco Friendly" },
-  { src: "/images/badge-hypo-allergenic.png", alt: "Hypo-Allergenic" },
-  { src: "/images/badge-no-odour.png", alt: "No Odour" },
-  { src: "/images/badge-quick-easy.png", alt: "Quick & Easy" },
+  { src: "/images/page-1.webp", alt: "100% Effective" },
+  { src: "/images/page-2.webp", alt: "Eco Friendly" },
+  { src: "/images/page-3.webp", alt: "Hypo-Allergenic" },
+  { src: "/images/page-4.webp", alt: "No Odour" },
+  { src: "/images/page-5.webp", alt: "Quick & Easy" },
 ];
 
 const BadgeCarousel = () => {

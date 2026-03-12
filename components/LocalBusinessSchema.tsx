@@ -42,7 +42,7 @@ const localBusinessSchema = {
     },
   ],
   priceRange: "££",
-  image: `${baseUrl}/images/nitnot-logo.webp`,
+  image: `${baseUrl}/images/logo.webp`,
   sameAs: [],
 };
 
