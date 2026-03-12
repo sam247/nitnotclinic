@@ -51,8 +51,8 @@ const serviceSections = [
 const pricing = [
   {
     title: "Head Lice Check",
-    clinicPrice: "£10",
-    homePrice: "£15",
+    clinicPrice: "£15",
+    homePrice: "£25",
     note: "Price counts towards further treatment if head lice are found.",
   },
   {
