@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -95,6 +96,8 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection />
 
       <section className="py-12 sm:py-20 bg-orange-500">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
