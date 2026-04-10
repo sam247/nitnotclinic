@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,8 @@ const serviceSections = [
     title: "Head Lice Treatment Clinic",
     subtitle: "Professional lice removal at our Hampton clinic",
     icon: Home,
+    imageSrc: "/image_1.jpg",
+    imageAlt: "Head lice treatment at NitNOT Clinic in Hampton",
     benefits: [
       "Fast, thorough head lice treatment in a calm, child-friendly environment",
       "Free on-street parking — no minimum charge for clinic appointments",
@@ -25,6 +28,8 @@ const serviceSections = [
     title: "Head Lice Home Visits",
     subtitle: "We come to you across London and surrounding areas",
     icon: Clock,
+    imageSrc: "/image_2.jpg",
+    imageAlt: "Professional head lice home visit",
     benefits: [
       "Same safe, professional head lice treatment in your own home",
       "Ideal for busy families or children who prefer familiar surroundings",
@@ -38,6 +43,8 @@ const serviceSections = [
     title: "Head Lice Checks",
     subtitle: "Quick, affordable confirmation before treatment",
     icon: Users,
+    imageSrc: "/image_3.jpg",
+    imageAlt: "Head lice check with a specialist",
     benefits: [
       "Quick scalp and hair inspection by a specialist",
       "Suitable for all ages — peace of mind for worried parents",
@@ -83,96 +90,135 @@ export default function ServicesPage() {
       {/* Section 1: Head lice treatment clinic */}
       <section className="py-12 sm:py-16 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            {(() => {
-              const Icon = serviceSections[0].icon;
-              return <Icon className="h-10 w-10 sm:h-12 sm:w-12 text-orange-500 flex-shrink-0" />;
-            })()}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                {serviceSections[0].title}
-              </h2>
-              <p className="text-gray-600">{serviceSections[0].subtitle}</p>
+              <div className="flex items-center gap-3 mb-6">
+                {(() => {
+                  const Icon = serviceSections[0].icon;
+                  return <Icon className="h-10 w-10 sm:h-12 sm:w-12 text-orange-500 flex-shrink-0" />;
+                })()}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    {serviceSections[0].title}
+                  </h2>
+                  <p className="text-gray-600">{serviceSections[0].subtitle}</p>
+                </div>
+              </div>
+              <ul className="space-y-2 mb-6 max-w-2xl">
+                {serviceSections[0].benefits.map((b, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button
+                className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
+                onClick={() => router.push("/contact")}
+              >
+                {serviceSections[0].cta}
+              </Button>
+            </div>
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+              <Image
+                src={serviceSections[0].imageSrc}
+                alt={serviceSections[0].imageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
-          <ul className="space-y-2 mb-6 max-w-2xl">
-            {serviceSections[0].benefits.map((b, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">{b}</span>
-              </li>
-            ))}
-          </ul>
-          <Button
-            className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
-            onClick={() => router.push("/contact")}
-          >
-            {serviceSections[0].cta}
-          </Button>
         </div>
       </section>
 
       {/* Section 2: Head lice home visits */}
       <section className="py-12 sm:py-16 bg-orange-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            {(() => {
-              const Icon = serviceSections[1].icon;
-              return <Icon className="h-10 w-10 sm:h-12 sm:w-12 text-orange-500 flex-shrink-0" />;
-            })()}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                {serviceSections[1].title}
-              </h2>
-              <p className="text-gray-600">{serviceSections[1].subtitle}</p>
+              <div className="flex items-center gap-3 mb-6">
+                {(() => {
+                  const Icon = serviceSections[1].icon;
+                  return <Icon className="h-10 w-10 sm:h-12 sm:w-12 text-orange-500 flex-shrink-0" />;
+                })()}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    {serviceSections[1].title}
+                  </h2>
+                  <p className="text-gray-600">{serviceSections[1].subtitle}</p>
+                </div>
+              </div>
+              <ul className="space-y-2 mb-6 max-w-2xl">
+                {serviceSections[1].benefits.map((b, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button
+                className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
+                onClick={() => router.push("/contact")}
+              >
+                {serviceSections[1].cta}
+              </Button>
+            </div>
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+              <Image
+                src={serviceSections[1].imageSrc}
+                alt={serviceSections[1].imageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
-          <ul className="space-y-2 mb-6 max-w-2xl">
-            {serviceSections[1].benefits.map((b, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">{b}</span>
-              </li>
-            ))}
-          </ul>
-          <Button
-            className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
-            onClick={() => router.push("/contact")}
-          >
-            {serviceSections[1].cta}
-          </Button>
         </div>
       </section>
 
       {/* Section 3: Head lice checks */}
       <section className="py-12 sm:py-16 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            {(() => {
-              const Icon = serviceSections[2].icon;
-              return <Icon className="h-10 w-10 sm:h-12 sm:w-12 text-orange-500 flex-shrink-0" />;
-            })()}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                {serviceSections[2].title}
-              </h2>
-              <p className="text-gray-600">{serviceSections[2].subtitle}</p>
+              <div className="flex items-center gap-3 mb-6">
+                {(() => {
+                  const Icon = serviceSections[2].icon;
+                  return <Icon className="h-10 w-10 sm:h-12 sm:w-12 text-orange-500 flex-shrink-0" />;
+                })()}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    {serviceSections[2].title}
+                  </h2>
+                  <p className="text-gray-600">{serviceSections[2].subtitle}</p>
+                </div>
+              </div>
+              <ul className="space-y-2 mb-6 max-w-2xl">
+                {serviceSections[2].benefits.map((b, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button
+                className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
+                onClick={() => router.push("/contact")}
+              >
+                {serviceSections[2].cta}
+              </Button>
+            </div>
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+              <Image
+                src={serviceSections[2].imageSrc}
+                alt={serviceSections[2].imageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
-          <ul className="space-y-2 mb-6 max-w-2xl">
-            {serviceSections[2].benefits.map((b, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">{b}</span>
-              </li>
-            ))}
-          </ul>
-          <Button
-            className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6"
-            onClick={() => router.push("/contact")}
-          >
-            {serviceSections[2].cta}
-          </Button>
         </div>
       </section>
 

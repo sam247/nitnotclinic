@@ -37,6 +37,9 @@ const Footer = () => {
               <Link href="/services" className="block text-sm sm:text-base text-gray-600 hover:text-orange-500 transition-colors">
                 Our Services
               </Link>
+              <Link href="/pricing" className="block text-sm sm:text-base text-gray-600 hover:text-orange-500 transition-colors">
+                Pricing
+              </Link>
               <Link href="/about" className="block text-sm sm:text-base text-gray-600 hover:text-orange-500 transition-colors">
                 About Us
               </Link>

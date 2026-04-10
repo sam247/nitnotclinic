@@ -13,8 +13,8 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Services", path: "/services" },
+    { name: "Pricing", path: "/pricing" },
     { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => pathname === path;

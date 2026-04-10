@@ -247,7 +247,7 @@ export default function IndexPage() {
               size="lg"
               variant="outline"
               className="border-orange-400 text-orange-600 hover:bg-orange-50 px-8 py-4 text-lg rounded-full"
-              onClick={() => router.push("/services")}
+              onClick={() => router.push("/pricing")}
             >
               View Pricing & Services
             </Button>
