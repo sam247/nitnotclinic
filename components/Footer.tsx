@@ -56,7 +56,7 @@ const Footer = () => {
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-orange-500">Clinic & Hours</h4>
             <div className="space-y-1 text-gray-600 text-xs sm:text-sm">
               <p>NitNOT Clinic</p>
-              <p>Flat 8, Chapter Way</p>
+              <p>Chapter Way</p>
               <p>Hampton, Richmond, London TW12 1AG</p>
               <div className="pt-2">
                 <p className="font-semibold text-gray-700">Opening hours</p>
@@ -69,7 +69,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
           <p className="text-xs sm:text-sm text-gray-500">
-            © NitNOT Clinic | Flat 8, Chapter Way, Hampton, Richmond, London TW12 1AG
+            © NitNOT Clinic | Chapter Way, Hampton, Richmond, London TW12 1AG
           </p>
         </div>
       </div>
