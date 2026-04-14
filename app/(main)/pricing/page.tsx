@@ -16,7 +16,7 @@ const pricing = [
   },
   {
     title: "Short/Thin to Medium Hair",
-    clinicPrice: "£45–£65",
+    clinicPrice: "£65–£75",
     homePrice: "£75–£85",
     note: "Follow-up treatment 7–10 days later from £55 (clinic).",
     popular: true,
